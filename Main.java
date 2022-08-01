@@ -1,31 +1,32 @@
-package Homework4;
+package happyfamily;
 
 public class Main {
+
     public static void main(String[] args) {
-        Human mother= new Human("Ann" ,"Murphy",1987);
-        Human father = new Human("John","Murphy", 1980);
+        Human mother= new Human("Ann" ,"Murphy",1989);
+        Human father = new Human("Jack","Murphy", 1985);
         Pet pet = new Pet ("dog", "Cloud", 1, 8,
-                new String[] {"playing","eating","walking"} );
+                new String[] {"playing","eating" , "walking"} );
 
         Family mFamily = new Family(mother,father);
 
-        Human childg = new Human("Bella", "Murphy", 2002,
-                96, new String[][]{{"sunday","reading book"}},mFamily);
-        Human childb = new Human("Jacob","Murphy",2005,
-                95, new String[][]{{"sunday,walking"}},mFamily);
+        Human child1 = new Human("Belle", "Murphy", 2002,
+                110, new String[][]{{"sunday","reading book"}},mFamily);
+        Human child2 = new Human("Jacob","Murphy",2005,
+                102,new String[][]{{"sunday,do sport"}},mFamily);
 
        mFamily.setPet(pet);
 
-        mFamily.addChild(childg);
+        mFamily.addChild(child1);
+       mFamily.addChild(child2);
+        System.out.println(mFamily+" -- "+mFamily.countFamily());
 
-        mFamily.addChild(childb);
-
-        System.out.println(mFamily+"  "+mFamily.countFamily());
-
-        mFamily.deleteChild(1);
-
+        mFamily.deleteChild(5);
         System.out.println(mFamily);
 
-    }
 
+
+
+
+    }
 }
